@@ -18,7 +18,7 @@ gulp.task('sass', function () {
 
 // Собираем JS
 gulp.task('js', function () {
-    gulp.src('./assets/scripts/**/*.js')
+    gulp.src('./assets/scripts/*.js')
         .pipe(concat('index.js'))
         .pipe(gulp.dest('./public/js'))
 });
@@ -28,7 +28,7 @@ gulp.task('js', function () {
 // Копируем и минимизируем изображения
 
 gulp.task('images', function () {
-    gulp.src('./assets/images/**/*')
+    gulp.src('./assets/images/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./public/images'))
 });
@@ -40,25 +40,25 @@ gulp.task('fonts', function () {
 
 
 gulp.task('watch', function () {
+    gulp.start()
     // Предварительная сборка проекта
-
-    gulp.watch('./assets/js/**/*.js', ['js']);
-    gulp.watch('./assets/styles/**/*.scss', ['sass']);
-    gulp.watch('./assets/images/**/*', ['images']);
+    gulp.watch('./assets/scripts/*.js', ['js']);
+    gulp.watch('./assets/styles/*.scss', ['sass']);
+    gulp.watch('./assets/images/*', ['images']);
 });
 
 gulp.task('build', function () {
     // css
-    gulp.src('./assets/styles/**/*.scss')
+    gulp.src('./assets/styles/*.scss')
         .pipe(sass().on('error', console.log))
         .pipe(gulp.dest('./build/css'))
     // js
-    gulp.src('./assets/scripts/**/*.js')
+    gulp.src('./assets/scripts/*.js')
         .pipe(concat('index.js'))
         .pipe(gulp.dest('./build/js'))
 
     // image
-    gulp.src('./assets/img/**/*')
+    gulp.src('./assets/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./build/images'))
 

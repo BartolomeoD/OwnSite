@@ -30,8 +30,5 @@
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^5.0.0"
   },
-  "dependencies": {
-    "connect-livereload": "^0.6.0",
-    "tiny-lr": "^1.1.1"
-  }
+  "dependencies": {}
 }
