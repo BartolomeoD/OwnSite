@@ -52,7 +52,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: './style/main.css',
+            filename: './styles/main.css',
             allChunks: true,
         }),
         new CleanWebpackPlugin(['dist']),
@@ -60,6 +60,10 @@ module.exports = {
         {
             from: './src/images',
             to: './img'
+        },
+        {
+            from: './src/fonts',
+            to: './fonts'
         }
         ]),
         new ImageminWebpackPlugin([
