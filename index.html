@@ -20,9 +20,9 @@
         <div class="section" data-anchor="frontendSlide">
             <div class="container">3</div>
         </div>
-        <div class="section"  data-anchor="backendSlide">
-                <div class="container">3</div>
-            </div>
+        <div class="section" data-anchor="backendSlide">
+            <div class="container">3</div>
+        </div>
         <div class="section" data-anchor="statisticSlide" id="stat">
             <div class="background">
                 <div class="blue"></div>
@@ -31,15 +31,75 @@
             <div class="container">
                 <h2>Немного статистики этой страницы</h2>
                 <div class="pagespeed">
+                    <div class="center">
+                        <div class="line">
+                            <h3>Pagespeed Insights Tools</h3>
+                        </div>
+                        <div class="top">
+                            <div id="optimization" class="result">
+                                <div class="value">
+                                    99/100
+                                </div>
 
+                                <div class="name">
+                                    Оптимизация
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p>
+                                <b>Внедренные приемы оптимизации</b>
+                            </p>
+                            <p>
+                                Сократить JS
+                            </p>
+                            <p>Включите сжатие</p>
+                            <p>Оптимизируйте изображения</p>
+                            <div class="disclaimer">
+                                <span>Все данные подгружаются при помощи API</span>
+                                <br>
+                                <a href="pagespeed">Ссылка на тест</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="metrika">
+                    <div class="center">
 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
 <script src="dist/scripts/script.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter48400226 = new Ya.Metrika({
+                    id:48400226,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
 
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/48400226" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </html>
