@@ -1,9 +1,9 @@
-var $ = require('jquery');
-require('./ownSite.js');
+let $ = require('jquery');
+import OwnSite from './OwnSite.js';
 import FullPage from 'fullpage.js';
 
 
-let app = OwnSite();
+let app = new OwnSite();
 // $.ajax({
 //     method: 'GET',
 //     url: 'https://www.googleapis.com/pagespeedonline/v4/runPagespeed',

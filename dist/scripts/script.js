@@ -13368,6 +13368,35 @@ return jQuery;
 
 /***/ }),
 
+/***/ "./src/scripts/OwnSite.js":
+/*!********************************!*\
+  !*** ./src/scripts/OwnSite.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+var OwnSite = function OwnSite() {
+    _classCallCheck(this, OwnSite);
+
+    console.log("site initialisated");
+    $("#fullpage-wrapper").fullpage();
+};
+
+exports.default = OwnSite;
+
+/***/ }),
+
 /***/ "./src/scripts/main.js":
 /*!*****************************!*\
   !*** ./src/scripts/main.js ***!
@@ -13378,6 +13407,10 @@ return jQuery;
 "use strict";
 
 
+var _OwnSite = __webpack_require__(/*! ./OwnSite.js */ "./src/scripts/OwnSite.js");
+
+var _OwnSite2 = _interopRequireDefault(_OwnSite);
+
 var _fullpage = __webpack_require__(/*! fullpage.js */ "./node_modules/fullpage.js/dist/jquery.fullpage.js");
 
 var _fullpage2 = _interopRequireDefault(_fullpage);
@@ -13385,10 +13418,9 @@ var _fullpage2 = _interopRequireDefault(_fullpage);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-__webpack_require__(/*! ./ownSite.js */ "./src/scripts/ownSite.js");
 
 
-var app = OwnSite();
+var app = new _OwnSite2.default();
 // $.ajax({
 //     method: 'GET',
 //     url: 'https://www.googleapis.com/pagespeedonline/v4/runPagespeed',
@@ -13399,26 +13431,6 @@ var app = OwnSite();
 // }).done(function(response) {
 //     console.log(response);
 // })
-
-/***/ }),
-
-/***/ "./src/scripts/ownSite.js":
-/*!********************************!*\
-  !*** ./src/scripts/ownSite.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var OwnSite = function OwnSite() {
-    _classCallCheck(this, OwnSite);
-
-    $("#fullpage-wrapper").fullpage();
-};
 
 /***/ }),
 
