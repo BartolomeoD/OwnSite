@@ -34,10 +34,10 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12"
+    "webpack-cli": "^2.0.12",
+    "imagemin-webpack-plugin": "^2.1.1"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "imagemin-webpack-plugin": "^2.1.1"
+    "jquery": "^3.3.1"
   }
 }

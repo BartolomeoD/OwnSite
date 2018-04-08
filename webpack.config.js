@@ -3,23 +3,23 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const ImageminWebpackPlugin = require('imagemin-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const fs = require('fs')
 
 
 module.exports = {
     entry: [
-        './src/js/index.js',
-        './src/scss/style.scss'
+        './src/scripts/main.js',
+        './src/styles/main.scss'
     ],
     output: {
-        filename: './js/main.js'
+        filename: './scripts/script.js'
     },
     devtool: "source-map",
     module: {
         rules: [{
             test: /\.js$/,
-            include: path.resolve(__dirname, 'src/js'),
+            include: path.resolve(__dirname, 'src/scripts'),
             use: {
                 loader: 'babel-loader',
                 options: {
@@ -29,7 +29,7 @@ module.exports = {
         },
         {
             test: /\.(sass|scss)$/,
-            include: path.resolve(__dirname, 'src/scss'),
+            include: path.resolve(__dirname, 'src/styles'),
             use: ExtractTextPlugin.extract({
                 use: [{
                     loader: "css-loader",
@@ -47,30 +47,18 @@ module.exports = {
                 }
                 ]
             })
-        },
-        {
-            test: /\.html$/,
-            include: path.resolve(__dirname, 'src/html/includes'),
-            use: ['raw-loader']
-        },
+        }
         ]
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: './css/style.css',
+            filename: './style/main.css',
             allChunks: true,
         }),
         new CleanWebpackPlugin(['dist']),
-        new CopyWebpackPlugin([{
-            from: './src/fonts',
-            to: './fonts'
-        },
+        new CopyWebpackPlugin([
         {
-            from: './src/favicon',
-            to: './favicon'
-        },
-        {
-            from: './src/img',
+            from: './src/images',
             to: './img'
         }
         ]),

@@ -1,12 +1,25 @@
-import Axios from "axios";
+// import Axios from "axios";
 
-Axios({
-    method : 'get',
+// Axios({
+//     method : 'get',
+//     url: 'https://www.googleapis.com/pagespeedonline/v4/runPagespeed',
+//     data: {
+//         url : "https://yandex.ru",
+//         key: "AIzaSyAQK0s1ozw5UigUlIJPma4URA-3-_0DgNc"
+//     }
+// }).then(function(response) {
+//     console.log(response.data);
+// })
+
+var $ = require('jquery');
+
+$.ajax({
+    method: 'GET',
     url: 'https://www.googleapis.com/pagespeedonline/v4/runPagespeed',
     data: {
         url : "https://yandex.ru",
         key: "AIzaSyAQK0s1ozw5UigUlIJPma4URA-3-_0DgNc"
     }
-}).then(function(response) {
-    console.log(response.data);
+}).done(function(response) {
+    console.log(response);
 })
