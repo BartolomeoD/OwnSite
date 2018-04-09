@@ -59,7 +59,7 @@ module.exports = {
         new CopyWebpackPlugin([
         {
             from: './src/images',
-            to: './img'
+            to: './images'
         },
         {
             from: './src/fonts',

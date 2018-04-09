@@ -8,6 +8,7 @@
     <title>Under construction</title>
     <link rel="stylesheet" href="./dist/styles/main.css">
 </head>
+
 <body>
     <div id="fullpage-wrapper">
         <div class="section" data-anchor="introSlide">
@@ -37,7 +38,7 @@
                         <div class="top">
                             <div id="optimization" class="result">
                                 <div class="value">
-                                    99/100
+                                    99 / 100
                                 </div>
 
                                 <div class="name">
@@ -46,14 +47,24 @@
                             </div>
                         </div>
                         <div class="bottom">
-                            <p>
-                                <b>Внедренные приемы оптимизации</b>
-                            </p>
-                            <p>
-                                Сократить JS
-                            </p>
-                            <p>Включите сжатие</p>
-                            <p>Оптимизируйте изображения</p>
+                            <div class="passed rules">
+                                <div class="icon icon-check">
+
+                                </div>
+                                <div class="text">
+                                    Выполнено правил
+                                    <span class="count"></span>
+                                </div>
+                            </div>
+                            <div class="nonpassed rules">
+                                <div class="icon icon-attention-alt">
+
+                                </div>
+                                <div class="text">
+                                    Рекомендации
+                                    <span class="count"></span>
+                                </div>
+                            </div>
                             <div class="disclaimer">
                                 <span>Все данные подгружаются при помощи API</span>
                                 <br>
@@ -64,7 +75,14 @@
                 </div>
                 <div class="metrika">
                     <div class="center">
-
+                        <div class="line">
+                            <a href="" class="link">
+                                <div class="yandex-logo-1"></div>
+                                <div class="yellow-box">
+                                    <div class="yandex-logo-2"></div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,17 +91,17 @@
 </body>
 <script src="dist/scripts/script.js"></script>
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<script type="text/javascript">
     (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
+        (w[c] = w[c] || []).push(function () {
             try {
                 w.yaCounter48400226 = new Ya.Metrika({
-                    id:48400226,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true
+                    id: 48400226,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true
                 });
-            } catch(e) { }
+            } catch (e) { }
         });
 
         var n = d.getElementsByTagName("script")[0],
@@ -98,6 +116,11 @@
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/48400226" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript>
+    <div>
+        <img src="https://mc.yandex.ru/watch/48400226" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
+
 </html>

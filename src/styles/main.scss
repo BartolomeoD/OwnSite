@@ -1,4 +1,5 @@
 //@import "jquery.fullPage.css";
+@import "fontello.css";
 body {
     margin: 0;
 }
@@ -173,10 +174,13 @@ body {
             height: 28rem;
         }
         .pagespeed {
+            h3 {
+                margin: 1.2rem 0;
+            }
             font-family: Roboto;
             font-size: 1rem;
             justify-content: flex-end;
-            padding-right: 2rem;            
+            padding-right: 2rem;
             a {
                 color: #039be5;
             }
@@ -189,7 +193,6 @@ body {
                     display: flex;
                     align-items: center;
                 }
-
                 .name {
                     margin-left: .6rem;
                     font-size: 1.6rem;
@@ -205,10 +208,40 @@ body {
                 }
             }
             .disclaimer {
+                border-top: 1px solid #ccc;
+                padding-top: .5rem;
                 margin-top: 2rem;
+                margin-right: -1.8rem;
+                ;
+            }
+            .rules {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 1rem;
+                .text {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+                .icon {
+                    padding: .4rem 0;
+                    color: white;
+                    font-size: 1.3rem;
+                    margin-right: .4rem;
+                }
+                .icon:before {
+                    margin-left: .1rem;
+                    margin-right: .1rem;
+                }
+            }
+            .passed.rules .icon {
+                background: #009a2b;
+            }
+            .nonpassed.rules .icon {
+                background: #fda100;
             }
             span {
-                color: #777;
+                color: #776;
                 font-style: italic;
             }
             .line {
@@ -220,6 +253,65 @@ body {
                 padding-right: 20rem;
                 display: flex;
                 justify-content: flex-end;
+            }
+        }
+        .metrika {
+            .line {
+                margin-left: 2rem;
+                height: 3.8rem;
+                .link {
+                    display: flex;
+                }
+                h3 {
+                    margin: 1rem 0;
+                    font-weight: normal;
+                    font-size: 1rem;
+                    line-height: 1.5;
+                }
+                .yandex-logo-1 {
+                    margin-top: .35rem;
+                    width: 6rem;
+                    height: 2.6rem;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjkiIGhlaWdodD0iMjgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTM2LjEwMiAyMi45NzFoLTEuMjY4VjkuMDIzaC03LjQxN3YxLjM2M2MwIDQuMjQ4LS4xNTkgOS4xOTMtMS42MTcgMTIuNTg1aC0uOTgzdjUuMDZoMi4yMlYyNWg2Ljg0NnYzLjAzMWgyLjIydi01LjA2em0xMC43NDcuOTUxbC0uNTctMS45MDJjLS42MzUuNDQ0LTEuNzQ0IDEuMDc4LTMuMTQgMS4wNzgtMS45NjUgMC0yLjk3OS0xLjkwMi0yLjk3OS01LjUxNmg2LjY1N1YxNi4yMmMwLTUuNDItMS43NDMtNy40MTgtNC40MDYtNy40MTgtMy4zOTIgMC00LjgxOSAzLjc0LTQuODE5IDguODc2IDAgNC45MTQgMi4wMyA3LjU0NSA1LjMyNiA3LjU0NSAxLjU4NSAwIDIuOTE2LS41MDcgMy45My0xLjN6bS0yNS45LTE0Ljg5OXY2Ljc4NGgtMy42NzZWOS4wMjNIMTQuOFYyNWgyLjQ3M3YtNy4xNjRoMy42NzdWMjVoMi40NFY5LjAyM2gtMi40NHpNNTYuMDQzIDI1aDIuNjk0bC00LjUzMy04LjQ2NCAzLjk2My03LjUxM0g1NS42NmwtMy44MzUgNy4zODZWOS4wMjNoLTIuNDczVjI1aDIuNDczdi03Ljk1N0w1Ni4wNDIgMjV6bTguNDk1LjIyMmMxLjQ1OSAwIDIuNDczLS40NzYgMy4zMjktMS4yMDVsLS41Ny0xLjgzOGMtLjU3MS41MDctMS40OS45ODItMi42OTUuOTgyLTEuOTk3IDAtMi45NDgtMi4yODItMi45NDgtNi4yNzYgMC00LjAyNiAxLjI2OC02LjAyMyAzLjA0My02LjAyMyAxLjAxNCAwIDEuOTY1LjUzOSAyLjYzIDEuMTFsLjM1LTIuMzQ3Yy0uNjk4LS40NDMtMS41MjItLjgyNC0yLjk0OC0uODI0LTMuNzQxIDAtNS42NzUgMy4yMDItNS42NzUgOC4yMSAwIDUuNDUzIDIuMDYgOC4yMSA1LjQ4NCA4LjIxem0tMzIuMTQzLTIuMjVoLTQuMjQ4YzEuMzMxLTMuMzkzIDEuNDktOC4zMDYgMS40OS0xMS42NjZ2LS4yODZoMi43NTh2MTEuOTUxek00Mi40MSAxMC44M2MxLjQyNiAwIDEuODcgMS45OTcgMS44NyA0LjcyM2gtNC4wOWMuMTYtMi44NTMuNjk4LTQuNzIzIDIuMjItNC43MjN6IiBmaWxsPSIjMDAwIi8+PHBhdGggZD0iTTkuNDE4IDE2LjMxNFYyNWgyLjQ0VjIuMzM0SDguMjEzYy0zLjU4MiAwLTYuNTk0IDIuMzc4LTYuNTk0IDcuMTMzIDAgMy4zOTIgMS4zMzIgNS4yMyAzLjMyOSA2LjI0NUwuNyAyNWgyLjgyMWwzLjg2OC04LjY4NmgyLjAyOXptMC0yLjAyOWgtMS4zYy0yLjEyNCAwLTMuODY4LTEuMTczLTMuODY4LTQuODE4IDAtMy43NzIgMS45MDItNS4wNzIgMy44NjgtNS4wNzJoMS4zdjkuODl6IiBmaWxsPSIjRjAwIi8+PC9zdmc+);
+                }
+                .yandex-logo-2 {
+                    margin-top: .3rem;
+                    width: 6rem;
+                    height: 2.6rem;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODUiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCA4NSAzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+c2VydmljZS1sb2dvLW1ldHJpY2EtcnU8L3RpdGxlPjxnIGZpbGw9IiMwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTUuNzM1IDkuOTk1Yy0uMzE3LTEuMTcyLS41Ny0yLjE4Ny0uNzYtMy4yMzJINC44OGMuMDYzIDEuMDc3LjA5NSAyLjIxOC4wOTUgMy4zNTlWMjZIMy41OFYzLjM0aDEuODM4bDMuODM1IDE0LjQ4M2MuMTU4LjYwMi4zOCAxLjc3NS40NzUgMi42M2guMDk1Yy4xMjctLjg1NS4zODEtMi4wNi41MzktMi42M0wxNC4yMjkgMy4zNGgxLjc3NVYyNmgtMS41MjJWMTAuMTIyYzAtMS4wNzguMDY0LTIuMjE4LjEyNy0zLjM1OWgtLjEyN2E3OS43NzQgNzkuNzc0IDAgMCAxLS43NiAzLjEzN2wtMy4zOTEgMTIuNjE0SDkuMDk0TDUuNzM1IDkuOTk1em0xNC4yNTMgOC4yN2g3LjIyOGMuNTA3LTUuNjc0LTEuMjY4LTguNTU5LTQuMDI2LTguNTU5LTIuNjk0IDAtNC42NiAzLjA3NS00LjY2IDguMzA2IDAgNS4yMyAxLjU1MyA4LjMwNSA0Ljk0NSA4LjMwNSAyLjUzNiAwIDMuNzQtMS44MDcgMy43NC0xLjgwN2wtLjQ3NS0xLjIwNXMtMS4xMSAxLjcxMi0zLjIzMyAxLjcxMmMtMi4zMTQgMC0zLjQ1NS0yLjM3Ny0zLjUxOS02Ljc1MnptMy4yMDItNy4zMjNjMS42MTcgMCAyLjg4NSAxLjkwMiAyLjYzMSA2LjE1SDIwLjAyYy4xMjctMy45OTQgMS40OS02LjE1IDMuMTctNi4xNXptMTQuNDcuMzE3di0xLjIzNmgtOC44OHYxLjIzNmgzLjcxVjI2aDEuNDkxVjExLjI2aDMuNjc5ek01OS41NzEgMjZoMS40MjZWMTAuMDIzaC0xLjNMNTQuNSAyMS4yNDVjLS4zMTcuNjk3LS42MzQgMS4zOTUtLjg1NiAyLjEyNGgtLjA5NWMuMDYzLS42OTguMTI3LTEuMzk1LjEyNy0yLjI1VjEwLjAyMkg1Mi4yOFYyNmgxLjI2OGw1LjE5OS0xMS4yNTRhMTQuMTkgMTQuMTkgMCAwIDAgLjg1Ni0yLjA2aC4wOTVhMjIuMDMzIDIyLjAzMyAwIDAgMC0uMTI3IDIuMTg3VjI2em02LjQ1OS04LjI3NEw3MS41NzcgMjZoMS42NDlsLTUuNjQzLTguNTU5IDUuMjYyLTcuNDE4aC0xLjQ1OGwtNS4zNTcgNy41MTN2LTcuNTEzaC0xLjQ5VjI2aDEuNDl2LTguMjc0ek00Ni44OCAyMy4yNjZjLjYxMy0xLjIxNS45Mi0zLjA5MS45Mi01LjYyOCAwLTIuMTEzLS4yNjQtMy43NTItLjc5My00LjkxNC0uNTI4LTEuMTYzLTEuMjU4LTEuNzQ0LTIuMTg4LTEuNzQ0LS4zNTkgMC0uNzAyLjA5LTEuMDMuMjctLjMyOC4xOC0uNjM0LjQxNy0uOTIuNzEzLS4yODUuMjk2LS41NDQuNjQtLjc3NiAxLjAzYTguNzI2IDguNzI2IDAgMCAwLS42MDMgMS4yMjF2OC45NDFjLjMxNy42NTYuNzA4IDEuMTQyIDEuMTczIDEuNDU5LjQ2NS4zMTcgMS4wNTcuNDc1IDEuNzc2LjQ3NSAxLjAxNSAwIDEuODI4LS42MDcgMi40NDEtMS44MjN6bS00LjIgMi42YTMuNDcgMy40NyAwIDAgMS0xLjE5LS45OTl2Ni4wNTZINDBWOS45OTdoMS4zbC4xMjcgMi42MzJhNy40MTggNy40MTggMCAwIDEgMS40MjctMi4wNDVjLjU5MS0uNjAzIDEuMzMxLS45MDQgMi4yMTktLjkwNC42NTUgMCAxLjI0Ny4xOSAxLjc3Ni41Ny41MjguMzgxLjk3Mi45MTUgMS4zMzEgMS42MDIuMzYuNjg3LjYzNCAxLjUxMS44MjUgMi40NzMuMTkuOTYyLjI4NSAyLjAyNC4yODUgMy4xODcgMCAyLjkzOC0uNDU0IDUuMTMtMS4zNjMgNi41NzktLjkxIDEuNDQ4LTIuMTA0IDIuMTcxLTMuNTgzIDIuMTcxYTMuNDg4IDMuNDg4IDAgMCAxLTEuNjY1LS4zOTZ6TTgxLjkyMyAyNmgxLjM2M2MtLjE5LS42MDItLjM0OS0xLjgzOS0uMzQ5LTIuOTQ4di04LjcxOGMwLTMuMTctMS40OS00LjYyOC00LjEyLTQuNjI4LTEuODA4IDAtMy4xMzkuNzkzLTMuNzczIDEuNjE3bC40MTIgMS40MjZjLjc2LTEuMTEgMS45OTctMS43NDMgMy4zNi0xLjc0MyAxLjc0NCAwIDIuNjYzIDEuMDQ2IDIuNjYzIDMuNDg3djEuOTk3aC0xLjc0M2MtMy40NTYgMC01LjMyNiAxLjc3NS01LjMyNiA1LjE5OSAwIDIuOTE2IDEuNDkgNC42MjggMy42NDUgNC42MjggMS41ODUgMCAyLjcyNy0uOTUxIDMuNDg3LTIuNDczLjA5NiAxLjE0Mi4yNTQgMS43NDQuMzggMi4xNTZ6bS0zLjU1LS44ODhjLTEuNTIyIDAtMi41MDUtMS4zLTIuNTA1LTMuNTUgMC0yLjc5IDEuMjY4LTMuOTk0IDMuOS0zLjk5NGgxLjcxMXY0LjQwNmMtLjU3IDEuNzEyLTEuNjE3IDMuMTM4LTMuMTA3IDMuMTM4eiIvPjwvZz48L3N2Zz4=);
+                }
+            }
+
+            .yellow-box::before,
+            .yellow-box::after {
+                content: "";
+                position: absolute;
+                width: 2.5rem;
+                border-bottom: .35rem solid #ffd633;
+                right: -2rem;
+                bottom: .45rem;
+                transform: rotate(135deg);
+            }
+            .yellow-box:after {
+                top: .45rem;
+                height: 0;
+                transform: rotate(45deg);
+            }
+            .yellow-box {
+                border-top: .35rem solid #ffd633;
+                border-bottom: .35rem solid #ffd633;
+                border-left: .35rem solid #ffd633;
+                align-items: center;
+                display: flex;
+                padding: 0 .5rem;
+                position: relative;
+                margin-left: .5rem;
             }
         }
     }
